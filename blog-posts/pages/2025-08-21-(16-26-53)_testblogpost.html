@@ -1,0 +1,73 @@
+<!-- Author: Leonardo Matias Pelcastre -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test blog post</title>
+    <link rel="stylesheet" href="/assets/styles/universal.css" />
+    <link rel="stylesheet" href="/assets/styles/blog_universal_style.css" />
+    <link rel="stylesheet" href="/assets/styles/blog_index_style.css" />
+    <link rel="stylesheet" href="/assets/styles/blog_post_style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="logo-div">
+      <a href="/site"
+        ><img src="/assets/swallow.svg" alt="" class="logo-icon" id="logo-icon"
+      /></a>
+    </div>
+    <div class="hamburger-div">
+      <a
+        href="javascript:void(0);"
+        class="hamburger-icon"
+        id="hamburger-icon"
+        onclick="toggleMenu()"
+      >
+        <i class="fa fa-bars" id="menu-icon"></i>
+      </a>
+    </div>
+    <div class="uncollapsed-menu"></div>
+    <nav class="menubar-div" id="menubar-div">
+      <ul class="menubar" id="menubar">
+        <li><a href="/site">Hem</a></li>
+        <li><a href="/blog-posts/">Blog</a></li>
+      </ul>
+    </nav>
+    <section class="blog-section"></section>
+    <section class="blog-wrapper">
+      <div class="blog-content"><h1 class="blog-page-header">Test blog post</h1><div class="datediv"><p class="date-of-arti">2025-08-21</p><p class="time-of-arti">(16:26:53)</p></div><hr class="blog-date-divider"><div class="blog-text-div"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,</p>
+<p><br /><div class="blog-image-div"><img alt="SKRIV EN KORT BESKRIVNING HÄR" src="/images_source/cover_2.jpg" title="SKRIV EN MUS HOOVRING TEXT HÄR" />.</div></p></div></div>
+    </section>
+    <footer>
+      <p>Prototyp 1 - &copy;Leonardo Matias Pelcastre 2025</p>
+    </footer>
+    <script>
+      const menuUl = document.getElementById("menubar");
+      const menuDiv = document.getElementById("menubar-div");
+      const menuIcon = document.getElementById("menu-icon");
+      const hamb_menu = document.getElementById("hamburger-menu");
+
+      function toggleMenu() {
+        const isOpen = menuDiv.style.height === "100%";
+        menuDiv.style.height = isOpen ? "80px" : "100%";
+        menuUl.style.display = isOpen ? "none" : "flex";
+        menuIcon.className = isOpen ? "fa fa-bars" : "fa fa-times";
+        menuIcon.hamb_menu.fontSize = "20px";
+      }
+
+      function reportWindowSize() {
+        const isWide = window.innerWidth > 900;
+        menuUl.style.display = isWide ? "flex" : "none";
+        menuDiv.style.height = isWide ? "80px" : menuDiv.style.height;
+        menuUl.style.flexDirection = isWide ? "row" : "column";
+        if (isWide) menuUl.style.justifyContent = "space-evenly";
+      }
+
+      window.onresize = reportWindowSize;
+    </script>
+  </body>
+</html>

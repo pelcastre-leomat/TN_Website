@@ -1,0 +1,71 @@
+<!-- Author: Leonardo Matias Pelcastre -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <link rel="stylesheet" href="/assets/styles/universal.css" />
+    <link rel="stylesheet" href="/assets/styles/blog_universal_style.css" />
+    <link rel="stylesheet" href="/assets/styles/blog_index_style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="logo-div">
+      <a href="/"
+        ><img src="/assets/swallow.svg" alt="" class="logo-icon" id="logo-icon"
+      /></a>
+    </div>
+    <div class="hamburger-div">
+      <a
+        href="javascript:void(0);"
+        class="hamburger-icon"
+        id="hamburger-icon"
+        onclick="toggleMenu()"
+      >
+        <i class="fa fa-bars" id="menu-icon"></i>
+      </a>
+    </div>
+    <div class="uncollapsed-menu"></div>
+    <nav class="menubar-div" id="menubar-div">
+      <ul class="menubar" id="menubar">
+        <li><a href="/">Hem</a></li>
+        <li><a href="/blog-posts/">Blog</a></li>
+      </ul>
+    </nav>
+    <section class="blog-section"></section>
+    <section class="blog-wrapper">
+      <div class="blog-content"><div class="blog-index-header"><h2 class="blog-list-header">2025</h2><hr class="blog-list-hr"></div><ul class="blog-list"><li><a href="/blog-posts/pages/2025-08-21-(16-26-53)_testblogpost.html">Test blog post (2025-08-21)</a></li></ul></div>
+    </section>
+    <footer>
+      <p>Prototyp 1 - &copy;Leonardo Matias Pelcastre 2025</p>
+    </footer>
+    <script>
+      const menuUl = document.getElementById("menubar");
+      const menuDiv = document.getElementById("menubar-div");
+      const menuIcon = document.getElementById("menu-icon");
+      const hamb_menu = document.getElementById("hamburger-menu");
+
+      function toggleMenu() {
+        const isOpen = menuDiv.style.height === "100%";
+        menuDiv.style.height = isOpen ? "80px" : "100%";
+        menuUl.style.display = isOpen ? "none" : "flex";
+        menuIcon.className = isOpen ? "fa fa-bars" : "fa fa-times";
+        menuIcon.hamb_menu.fontSize = "20px";
+      }
+
+      function reportWindowSize() {
+        const isWide = window.innerWidth > 900;
+        menuUl.style.display = isWide ? "flex" : "none";
+        menuDiv.style.height = isWide ? "80px" : menuDiv.style.height;
+        menuUl.style.flexDirection = isWide ? "row" : "column";
+        if (isWide) menuUl.style.justifyContent = "space-evenly";
+      }
+
+      window.onresize = reportWindowSize;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+/* Index */
+
+.blog-index-container {
+  width: 75%;
+}
+
+.blog-list-header {
+  margin-top: 20px;
+}
+
+.blog-list-hr {
+  margin-bottom: 20px;
+}
+
+.blog-list {
+  list-style: none;
+}
+
+.blog-list a {
+  text-decoration: none;
+}
