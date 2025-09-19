@@ -5,15 +5,16 @@
 
 html,
 body {
-  background-color: pink;
+  scroll-behavior: smooth;
+  background-color: rgb(255, 255, 255);
   height: 100%;
   width: 100%;
 }
 
 .navbar {
+  z-index: 2;
   width: 100%;
   height: 90px;
-  background-color: red;
   position: fixed;
 }
 
@@ -27,7 +28,10 @@ body {
 }
 
 .menuitems {
+  z-index: 2;
   display: flex;
+  /* border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px; */
   height: 100%;
   align-items: center;
   gap: 20px;
@@ -37,20 +41,27 @@ body {
 }
 
 .menuelem {
+  z-index: 2;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 600;
   text-decoration: none;
   list-style-type: none;
-  max-width: 80px;
   max-height: 20px;
   text-align: center;
-  border: 2px solid #f5f3f1;
+  border: 2px solid #ffffff;
   border-radius: 20px;
-  padding: 10px 20px 10px 20px;
-  z-index: 500;
-  color: black;
+  padding: 10px 10px 10px 10px;
+  color: #ffffff;
 }
 
-#logo {
-  border: none;
+.logo a {
+  padding: 1px 5px 1px 5px;
+  border: 1px solid rgb(57, 57, 57);
+  text-decoration: none;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  font-size: 2em;
+  color: #393939;
 }
 
 .logo img {
@@ -58,12 +69,86 @@ body {
   max-height: 70px;
 }
 
-.cover {
+.hidden_menu {
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  background-color: lightgray;
+  top: -100%;
+  /* visibility: hidden; */
+  transition: top 0.5s ease; /* The animation transition */
+}
+
+.hidden_menu a {
+  text-align: left;
+  text-decoration: none;
+  color: rgb(57, 57, 57);
+  font-family: "Times New Roman", Times, serif;
+}
+
+.hero {
   /* background-image: url("../cover_2.jpg"); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Times New Roman", Times, serif;
+  color: #393939;
   background-position: center;
   background-size: cover;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   width: 100vw;
   height: 100vh;
-  overflow-wrap: anywhere;
+  flex-direction: column;
+  text-align: center;
+}
+
+.hero_logo_blk {
+  width: 100px;
+}
+
+.book_btn {
+  position: absolute;
+  bottom: 20px;
+  padding: 10px;
+  box-shadow: none;
+  border: none;
+  border: 2px solid #f5f3f1;
+  border-radius: 20px;
+  background-color: #c8c8c8;
+  padding: 10px 10px 10px 10px;
+  color: rgb(57, 57, 57);
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.expl_section {
+  height: 100vh;
+  background-color: #d3d3d3;
+  color: #393939;
+  padding: 20px;
+}
+
+.booka_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: white;
+  text-align: center;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #c8c8c8;
+  padding: 10px;
 }

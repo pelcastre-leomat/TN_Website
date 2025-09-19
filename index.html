@@ -11,24 +11,50 @@
     <title>TN</title>
   </head>
   <body>
+    <!-- Make nav be inserted by js -->
     <div class="navbar">
       <div class="logo">
-        <a href="#home" class="active"
-          ><img src="assets/swallow.svg" alt="PLACEHOLDER LOGO"
-        /></a>
+        <a href="/" class="active">HN</a>
       </div>
       <div class="menuitems">
         <a href="javascript:void(0);" class="menuelem" onclick="myFunction()">
           <i class="fa fa-bars"></i>
         </a>
-        <a href="#" class="menuelem">BOOK</a>
+        <a href="#booka_section" class="menuelem">BOKA</a>
       </div>
     </div>
-    <section class="cover"></section>
-    <script>
-      function myFunction() {
-        console.log("FK");
-      }
-    </script>
+    <div class="hidden_menu" id="hidden_menu">
+      <!-- Menu button? -->
+      <a href="#">TRÄDGÅRDS NISSARNA</a>
+      <a href="#">IT NISSARNA</a>
+      <a href="#">KONTAKTA OSS</a>
+      <a href="#">OM OSS</a>
+    </div>
+    <section class="hero">
+      <img class="hero_logo_blk" src="assets/swallow_blk.svg" alt="" />
+      <h2>Behöver du hjälp med din trädgård?</h2>
+      <a href="#booka_section" class="book_btn">BOKA</a>
+    </section>
+    <section class="expl_section">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas labore
+        dolor cumque autem quod eius dolore voluptatibus minima. Magni eius
+        cumque beatae impedit ab expedita commodi culpa quibusdam? Dolore
+        maiores deleniti nam amet minus modi aliquam suscipit temporibus earum.
+        Praesentium quos odio voluptates minima quas consequatur a nemo iure
+        laboriosam aut explicabo, repellat omnis aperiam veniam. Recusandae at
+        ad quis!
+      </p>
+    </section>
+    <section id="booka_section" class="booka_section">
+      <h1>Booka nu!</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum debitis
+        eaque dolorem dolore accusamus cumque vero dolores voluptatem doloribus
+        sit!
+      </p>
+    </section>
+    <footer>&copy; Leonardo Matias Pelcastre 2025</footer>
+    <script src="assets/js/menu.js"></script>
   </body>
 </html>
