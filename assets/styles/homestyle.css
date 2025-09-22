@@ -1,3 +1,7 @@
+:root {
+  --nav-bar-height: 90px;
+}
+
 * {
   margin: 0px;
   padding: 0px;
@@ -7,14 +11,26 @@ html,
 body {
   scroll-behavior: smooth;
   background-color: rgb(255, 255, 255);
-  height: 100%;
-  width: 100%;
+  height: 100dvh;
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+html {
+  overflow: hidden;
+}
+
+body {
+  scroll-snap-type: y mandatory;
+  position: fixed;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 .navbar {
   z-index: 2;
   width: 100%;
-  height: 90px;
+  height: var(--nav-bar-height);
   position: fixed;
 }
 
@@ -53,6 +69,9 @@ body {
   padding: 10px 10px 10px 10px;
   color: #ffffff;
 }
+.menulink {
+  z-index: 2;
+}
 
 .logo a {
   padding: 1px 5px 1px 5px;
@@ -74,7 +93,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  height: 100vh;
+  height: 100dvh;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -82,7 +101,7 @@ body {
   background-color: lightgray;
   top: -100%;
   /* visibility: hidden; */
-  transition: top 0.5s ease; /* The animation transition */
+  transition: top 0.5s ease-in; /* The animation transition */
 }
 
 .hidden_menu a {
@@ -93,6 +112,7 @@ body {
 }
 
 .hero {
+  scroll-snap-align: start;
   /* background-image: url("../cover_2.jpg"); */
   display: flex;
   justify-content: center;
@@ -102,8 +122,8 @@ body {
   background-position: center;
   background-size: cover;
   background-color: rgb(255, 255, 255);
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100dvh;
   flex-direction: column;
   text-align: center;
 }
@@ -115,9 +135,7 @@ body {
 .book_btn {
   position: absolute;
   bottom: 20px;
-  padding: 10px;
   box-shadow: none;
-  border: none;
   border: 2px solid #f5f3f1;
   border-radius: 20px;
   background-color: #c8c8c8;
@@ -129,23 +147,106 @@ body {
 }
 
 .expl_section {
-  height: 100vh;
+  scroll-snap-align: start;
+  height: 100dvh;
   background-color: #d3d3d3;
   color: #393939;
-  padding: 20px;
-}
-
-.booka_section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  overflow: hidden;
+  padding: 0px 20px 0px 20px;
+}
+
+.services_header {
+  padding-top: var(--nav-bar-height);
+  margin-top: 20px;
+}
+
+.service_carrousel {
+  border-radius: 20px;
+  display: flex;
+  list-style: none;
+  width: 100%;
+  height: 75%;
+  margin-block: 2rem;
+  margin-inline: auto;
+  overflow: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.services_card {
+  border-radius: 20px;
+  background-color: white;
+  display: grid;
+  width: 100%;
+  grid-template-rows: 2fr 2fr;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+}
+
+.services_card_img {
+  background-color: white;
+  border-radius: 20px;
+}
+
+.services_card_img img {
+  border-radius: 20px 20px 0px 0px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.services_card_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: white;
+}
+
+.services_card_img {
+  min-width: 0;
+  min-height: 0;
+}
+
+.services_card_title {
+  width: 100%;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.services_card_text {
+  padding: 0px 10px 0px 10px;
+}
+
+.service_card {
+  display: grid;
+  place-items: center;
+  color: white;
+  font-size: 3rem;
+
+  aspect-ratio: 2/1;
+  width: 100%;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+}
+
+.booka_section {
+  scroll-snap-type: y mandatory;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
   background-color: white;
   text-align: center;
 }
 
 footer {
+  scroll-snap-align: start;
+
   display: flex;
   align-items: center;
   justify-content: center;
