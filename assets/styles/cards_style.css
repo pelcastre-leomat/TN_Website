@@ -1,0 +1,143 @@
+.expl_section {
+  scroll-snap-align: start;
+  height: 100dvh;
+  background-color: #d3d3d3;
+  color: #393939;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 0px 20px 0px 20px;
+  position: relative;
+}
+
+.carrousel_wrapper {
+  padding-top: var(--nav-bar-height);
+  height: 100%;
+  margin-block: 2rem;
+  margin-top: 0px;
+  margin-inline: auto;
+  margin-bottom: 0px;
+  display: grid;
+  grid-template-rows: 1fr 9fr 0.5fr;
+}
+
+.service_header_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.service_carrousel {
+  border-radius: 20px;
+  display: flex;
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.services_card {
+  border-radius: 20px;
+  background-color: white;
+  display: grid;
+  width: 100%;
+  max-width: 350px;
+  grid-template-rows: 2fr 2fr;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  margin: 0px 5px 0px 5px;
+  transition: 0.2s ease-in-out;
+}
+
+.services_card_img {
+  background-color: white;
+  border-radius: 20px;
+}
+
+.services_card_img img {
+  border-radius: 20px 20px 0px 0px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.services_card_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.services_card_img {
+  min-width: 0;
+  min-height: 0;
+}
+
+.services_card_title {
+  width: 100%;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.services_card_text {
+  padding: 0px 10px 0px 10px;
+}
+
+.indicator {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.scrollmarker {
+  color: grey;
+  padding: 0px;
+  text-align: center;
+  margin: 0;
+  font-size: 25px;
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+  border-radius: 40px;
+}
+
+@media (width>1300px) {
+  .carrousel_wrapper {
+    width: 100%;
+  }
+
+  .service_carrousel {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .services_card {
+    flex-shrink: 0;
+    /* display: grid;
+    grid-template-rows: 2fr 2fr; */
+    transition: width 0.5s ease-in-out;
+    height: 300px; /* or set a fixed px height if needed */
+  }
+
+  .services_card_img {
+    flex-shrink: 0;
+    width: 100%;
+  }
+
+  .services_card_img img {
+    width: 100%;
+    object-fit: cover; /* crop instead of squish if needed */
+    display: block; /* remove extra inline spacing */
+  }
+}

@@ -1,0 +1,81 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100vw;
+}
+
+.carousel {
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  width: 100%;
+  height: 100%;
+  white-space: nowrap;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+}
+
+.carousel > * {
+  display: inline-block;
+  scroll-snap-align: start;
+  width: 100%;
+  height: 80vh;
+}
+
+.indicator {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  bottom: 0;
+}
+
+.scrollmarker {
+  color: grey;
+  padding: 0px;
+  text-align: center;
+  margin: 0;
+  font-size: 25px;
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+  border-radius: 40px;
+}
+
+.scrollmarker:hover {
+  color: red;
+}
+
+#x {
+  background-color: pink;
+}
+#y {
+  background-color: lightcyan;
+}
+#z {
+  background-color: lightgray;
+}
+
+#v {
+  background-color: purple;
+}

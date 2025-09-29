@@ -1,0 +1,81 @@
+.navbar {
+  z-index: 2;
+  width: 100%;
+  height: var(--nav-bar-height);
+  position: fixed;
+}
+
+.logo {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: inherit;
+  justify-content: center;
+  align-items: center;
+}
+
+.menuitems {
+  z-index: 2;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
+  background-color: rgb(200, 200, 200);
+  padding: 0px 20px 0px 20px;
+}
+
+.menuelem {
+  z-index: 2;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 600;
+  text-decoration: none;
+  list-style-type: none;
+  max-height: 20px;
+  text-align: center;
+  border: 2px solid #ffffff;
+  border-radius: 20px;
+  padding: 10px 10px 10px 10px;
+  color: #ffffff;
+}
+.menulink {
+  z-index: 2;
+}
+
+.logo a {
+  padding: 1px 5px 1px 5px;
+  border: 1px solid rgb(57, 57, 57);
+  text-decoration: none;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  font-size: 2em;
+  color: #393939;
+}
+
+.logo img {
+  height: 25vh;
+  max-height: 70px;
+}
+
+.hidden_menu {
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: 100dvh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  background-color: lightgray;
+  top: -100%;
+  /* visibility: hidden; */
+  transition: top 0.3s ease-in; /* The animation transition */
+}
+
+.hidden_menu a {
+  text-align: left;
+  text-decoration: none;
+  color: rgb(57, 57, 57);
+  font-family: "Times New Roman", Times, serif;
+}
