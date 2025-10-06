@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --page-padding: 0px 20px 0px 20px;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  height: 100vh;
+  width: 100vw;
+}
+body {
+  display: grid;
+  overflow: hidden;
+  grid-template-rows: 90px 1fr;
+  scroll-snap-type: y mandatory;
+}
+
+.menu_container {
+  grid-row: 1;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(200, 200, 200);
+  overflow: hidden;
+  z-index: 30;
+}
+
+.page_content_container {
+  position: relative;
+  grid-row: 2;
+  height: 100%;
+  width: 100%;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
+.hero_section {
+  width: 100%;
+  padding: var(--page-padding);
+  background-color: white;
+  scroll-snap-align: start;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.services_content_container {
+  width: 100%;
+  pad: var(--page-padding);
+  background-color: lightblue;
+  scroll-snap-align: start;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.book_time_section {
+  width: 100%;
+  pad: var(--page-padding);
+
+  background-color: lightcoral;
+  scroll-snap-align: start;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

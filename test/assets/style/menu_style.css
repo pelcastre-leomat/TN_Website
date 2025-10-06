@@ -1,0 +1,91 @@
+:root {
+  --btn-padding: 10px 20px 10px 20px;
+  --btn-border: 1px solid rgb(128, 128, 128);
+}
+
+.navbar {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px 0px 20px;
+}
+
+.menubutton {
+  width: 90px;
+  padding: 0;
+  margin: 0;
+  border: var(--btn-border);
+  border-radius: 20px;
+}
+
+.menubutton:hover {
+  cursor: pointer;
+}
+
+.logo {
+  border: var(--btn-border);
+  text-decoration: none;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  font-size: 2em;
+  color: #393939;
+  text-align: center;
+  padding: 0px 5px 0px 5px;
+}
+
+.menuelem {
+  width: 100%;
+  color: red;
+  text-align: right;
+  display: flex;
+  align-items: center;
+  padding: var(--btn-padding);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.book_btn {
+  font-weight: bold;
+  color: #393939;
+  text-align: center;
+  width: 90px;
+  padding: var(--btn-padding);
+  border: var(--btn-border);
+  border-radius: 20px;
+  text-decoration: none;
+}
+/* 
+body.no-scroll {
+  overflow: hidden;
+} */
+
+.hidden_menu {
+  position: absolute;
+  display: none;
+  opacity: 0;
+  transition-property: display opacity;
+  transition-duration: 0.5s;
+  transition-behavior: allow-discrete;
+  background-color: pink;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  z-index: -20;
+}
+
+.hidden_menu.open {
+  display: flex;
+  top: 0;
+  z-index: -20;
+  opacity: 1;
+  @starting-style {
+    opacity: 0;
+  }
+}

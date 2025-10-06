@@ -1,0 +1,16 @@
+.leaf_hero {
+  width: 100px;
+}
+
+.hero_header {
+  margin: 0px;
+  font-size: 1.5em;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 500;
+}
+
+.book_btn.hero {
+  position: absolute;
+  bottom: 20px;
+}
