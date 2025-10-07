@@ -3,7 +3,7 @@
 }
 
 :root {
-  --page-padding: 0px 20px 0px 20px;
+  --page-padding: 20px 20px 20px 20px;
 }
 
 html,
@@ -11,9 +11,10 @@ body {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
-  height: 100vh;
-  width: 100vw;
+  height: 100dvh;
+  width: 100dvw;
 }
+
 body {
   display: grid;
   overflow: hidden;
@@ -28,6 +29,9 @@ body {
   background-color: rgb(200, 200, 200);
   overflow: hidden;
   z-index: 30;
+}
+.menu_container > * {
+  z-index: 100;
 }
 
 .page_content_container {
@@ -56,20 +60,21 @@ body {
 
 .services_content_container {
   width: 100%;
-  pad: var(--page-padding);
-  background-color: lightblue;
+  padding: var(--page-padding);
+  background-color: rgb(225, 225, 225);
+
   scroll-snap-align: start;
   height: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
 }
 
 .book_time_section {
   width: 100%;
-  pad: var(--page-padding);
-
-  background-color: lightcoral;
+  padding: var(--page-padding);
+  background-color: white;
   scroll-snap-align: start;
   height: 100%;
   display: flex;
