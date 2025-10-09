@@ -10,6 +10,11 @@
   font-weight: 500;
 }
 
+.services_header {
+  font-size: 1.5em;
+  font-weight: 0;
+}
+
 .book_btn.hero {
   position: absolute;
   bottom: 20px;
