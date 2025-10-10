@@ -1,5 +1,6 @@
 :root {
   --card-border: 20px;
+  --carousel-card-color: white;
 }
 
 .carousel_wrapper {
@@ -14,34 +15,35 @@
   scroll-snap-type: x mandatory;
   align-items: stretch;
   gap: 20px;
+  scrollbar-width: none;
 }
 
 .carousel_slide {
-  background-color: white;
+  background-color: var(--carousel-card-color);
   border-radius: var(--card-border);
   flex: 0 0 auto;
   height: 100%;
   /* Possibly good for limiting too much growth */
   max-height: 600px;
   width: 100%;
-  padding: 20px;
+  /* padding: 20px; */
   transition: 1s ease-in-out;
-  background-color: white;
   scroll-snap-align: start;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: transparent;
 }
 
-/* this centers inside the slide: */
 .slide_container {
+  border: 2px solid rgb(200, 200, 200);
   background-size: cover;
   background-position: center;
   border-radius: var(--card-border);
   position: relative;
   color: grey;
   width: 100%;
-  height: 100%; /* fills the stretched slide */
+  height: 100%;
   display: grid;
   grid-template-rows: 1.5fr 1fr;
   grid-template-columns: 1fr;
@@ -71,16 +73,29 @@
   width: 100%;
   height: 100%;
   background-color: rgba(255, 255, 255, 1);
-  /* backdrop-filter: blur(20px); */
 }
 
 .slide_body_text_wrapper {
   max-width: 200px;
 }
 
-/* Maybe add mq to check for height of screen too, over 1000px and make cards 4x4 */
+@media (width>1000px) and (height > 1400px) {
+  .carousel_wrapper {
+    display: grid;
+    width: 100%;
+    max-width: 1500px;
+    grid-template-columns: 1fr 1fr;
+    padding: 0px 10% 0px 10%;
+    justify-items: center;
+    align-items: center;
+  }
 
-@media (1000px < width < 1399px) {
+  .carousel_slide {
+    max-width: 700px;
+  }
+}
+
+@media (1000px < width < 1399px) and (height < 1400px) {
   .carousel_wrapper {
     width: 100%;
     max-width: 100%;
@@ -97,7 +112,7 @@
   }
 }
 
-@media (width>1400px) {
+@media (width>1400px) and (height < 1400px) {
   .carousel_wrapper {
     display: flex;
     width: 100%;
@@ -146,7 +161,22 @@
     transition: bottom 0.4s ease;
   }
 
+  .carousel_slide.tapped {
+    flex-grow: 1.3;
+    transition: flex-grow 0.3s ease, width 0.3s ease;
+  }
+
+  .carousel_slide.tapped .slide_title {
+    bottom: 50%;
+  }
+
+  .carousel_slide.tapped .slide_body {
+    bottom: 0;
+    width: 100%;
+  }
+
   .carousel_slide:not(.tapped):hover .slide_body {
+    pointer-events: none;
     bottom: 0;
     width: 100%;
   }

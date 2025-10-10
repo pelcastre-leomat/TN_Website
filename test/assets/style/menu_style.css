@@ -68,7 +68,7 @@
   align-items: center;
   gap: 20px;
   justify-content: center;
-  background-color: pink;
+  background-color: #e1e1e1;
   z-index: 20;
   visibility: hidden;
   opacity: 0;
@@ -78,4 +78,9 @@
 .hidden_menu.open {
   visibility: visible;
   opacity: 1;
+}
+
+.hidden_menu_link {
+  color: black;
+  font-family: "Times New Roman", Times, serif;
 }
