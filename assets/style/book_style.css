@@ -1,28 +1,35 @@
 .book_header {
-  margin: 0px;
-  font-size: 1.5em;
-  text-align: center;
-  font-family: "Times New Roman", Times, serif;
-  font-weight: 500;
+    margin: 0px;
+    font-size: 1.5em;
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 500;
 }
 
-.book_desc{
-  line-height: 30px;
+.book_desc {
+    line-height: 30px;
+    font-size: 1.2em;
+
+}
+
+.rake_logo {
+    width: 50px;
+    padding-bottom: 20px;
 }
 
 .interest_btn {
-  font-weight: bold;
-  color: #393939;
-  text-align: center;
-  width: max-content;
-  padding: var(--btn-padding);
-  border: var(--btn-border);
-  border-radius: 20px;
-  text-decoration: none;
-  transition: background-color 0.1s ease-in;
+    font-weight: bold;
+    color: #393939;
+    text-align: center;
+    width: max-content;
+    padding: var(--btn-padding);
+    border: var(--btn-border);
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background-color 0.1s ease-in;
 }
 
-.interest_btn:hover{
-    background-color: rgb(200,200,200);
+.interest_btn:hover {
+    background-color: rgb(200, 200, 200);
     /* color: black; */
 }

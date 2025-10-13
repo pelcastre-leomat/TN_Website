@@ -58,6 +58,10 @@
   text-decoration: none;
 }
 
+.book_btn:hover{
+  color: black;
+}
+
 .hidden_menu {
   position: absolute;
   display: flex;

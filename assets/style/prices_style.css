@@ -1,0 +1,94 @@
+.price_wrapper {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.prices_logo {
+    width: 40px;
+}
+
+.prices_card {
+    display: flex;
+    width: 100%;
+    max-width: 300px;
+    height: min-content;
+    justify-content: space-around;
+    align-items: start;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 20px;
+    padding: 30px 20px 30px 20px;
+}
+
+.prices_card>* {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0px;
+}
+
+.price_card_top {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+}
+
+.price_card_top>* {
+    margin: 0;
+}
+
+.price_card_bottom {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+}
+
+.price_card_bottom>* {
+    margin: 0;
+}
+
+.prices_header {
+    margin: 0px;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 500;
+}
+
+.price_card_title {
+    font-size: 1.7em;
+    font-weight: bold;
+}
+
+.price {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.price_notes {
+    box-sizing: border-box;
+    line-height: 25px;
+    padding-left: 0;
+    list-style-position: inside;
+}
+
+.price_notes li::marker {
+    margin: 0px;
+}
+
+@media(width>1000px) {
+    .price_wrapper {
+        flex-wrap: wrap;
+        flex-direction: initial;
+    }
+
+    .prices_card {
+        height: 200px;
+
+    }
+}

@@ -19,3 +19,9 @@
   position: absolute;
   bottom: 20px;
 }
+
+.book_btn.hero:hover{
+  color: black;
+}
+
+

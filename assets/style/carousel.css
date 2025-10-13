@@ -18,6 +18,17 @@
   scrollbar-width: none;
 }
 
+.carousel_buttons{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.carousel_buttons > *{
+  padding: 0px;
+}
+
 .carousel_slide {
   background-color: var(--carousel-card-color);
   border-radius: var(--card-border);
@@ -93,6 +104,10 @@
   .carousel_slide {
     max-width: 700px;
   }
+
+  .carousel_buttons{
+    display: none;
+  }
 }
 
 @media (1000px < width < 1399px) and (height < 1400px) {
@@ -121,6 +136,10 @@
     height: 60vh;
     overflow: hidden;
     align-items: stretch;
+  }
+
+  .carousel_buttons{
+    display: none;
   }
 
   .carousel_slide {
