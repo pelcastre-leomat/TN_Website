@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="assets/style/menu_style.css" />
     <link rel="stylesheet" href="assets/style/start_page.css" />
     <link rel="stylesheet" href="assets/style/carousel.css" />
+    <link rel="stylesheet" href="assets/style/book_style.css">
     <link rel="icon" type="image/x-icon" href="assets/images/logo.ico" />
     <title>TN</title>
   </head>
@@ -89,10 +90,10 @@
         <a href="#book_section" class="book_btn" onclick="hideMenu()">BOKA</a>
       </div>
       <div class="hidden_menu" id="hidden_menu">
-        <a class="hidden_menu_link" href="/">TRÄDGÅRDS NISSARNA</a>
-        <a class="hidden_menu_link" href="#">IT NISSARNA</a>
-        <a class="hidden_menu_link" href="#">KONTAKTA OSS</a>
-        <a class="hidden_menu_link" href="#">OM OSS</a>
+        <a class="hidden_menu_link" href="/">HEM</a>
+        <!-- <a class="hidden_menu_link" href="#">IT NISSARNA</a> -->
+        <a class="hidden_menu_link" href="#book_section" onclick="hideMenu()">BOKA</a>
+        <a class="hidden_menu_link" href="#about_us" onclick="hideMenu()">OM NISSARNA</a>
       </div>
     </div>
     <div class="page_content_container">
@@ -113,7 +114,7 @@
           <div class="carousel_slide">
             <div
               class="slide_container"
-              style="background-image: url(assets/images/cover_2.jpg)"
+              style="background-image: url(assets/images/leaf_2.JPG)"
             >
               <h1 class="slide_title">Plocka löv</h1>
               <div class="slide_body">
@@ -169,7 +170,16 @@
         </div>
       </div>
       <div id="book_section" class="book_time_section">
-        <h1>Book</h1>
+        <p class="book_header">BOKA</p>
+        <p class="book_desc">För att boka, fyller du i en intresseanmälan. <br> 
+          Tryck på knappen för att komma till vårt Google formulär.</p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdmzStDICdM69EwNld7pQU0y1Mah2SH8phyY0iy4EQqBdSEtQ/viewform?pli=1&pli=1" class="interest_btn" onclick="hideMenu()">INTRESSEANMÄLAN</a>
+
+      </div>
+      <div class="about_us" id="about_us">
+        <div class="about_us_wrapper">
+          Om Nissarna
+        </div>
       </div>
     </div>
     <script src="js/menu.js"></script>

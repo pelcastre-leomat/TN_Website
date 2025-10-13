@@ -1,6 +1,6 @@
 :root {
   --btn-padding: 10px 20px 10px 20px;
-  --btn-border: 1px solid rgb(128, 128, 128);
+  --btn-border: 1px solid #808080;
 }
 
 .navbar {
@@ -83,4 +83,12 @@
 .hidden_menu_link {
   color: black;
   font-family: "Times New Roman", Times, serif;
+  text-decoration: none;
 }
+
+.hidden_menu_link:hover{
+  font-weight: bold;
+}
+
+
+
