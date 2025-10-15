@@ -1,216 +1,289 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/style/structure_style.css" />
+    <link rel="stylesheet" href="assets/style/menu_style.css" />
+    <link rel="stylesheet" href="assets/style/start_page.css" />
+    <link rel="stylesheet" href="assets/style/carousel.css" />
+    <link rel="stylesheet" href="assets/style/book_style.css" />
+    <link rel="stylesheet" href="assets/style/prices_style.css" />
+    <link rel="stylesheet" href="assets/style/about_us_style.css" />
+    <link rel="icon" type="image/x-icon" href="assets/images/logo.ico" />
+    <title>HN</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="assets/style/structure_style.css" />
-  <link rel="stylesheet" href="assets/style/menu_style.css" />
-  <link rel="stylesheet" href="assets/style/start_page.css" />
-  <link rel="stylesheet" href="assets/style/carousel.css" />
-  <link rel="stylesheet" href="assets/style/book_style.css">
-  <link rel="stylesheet" href="assets/style/prices_style.css">
-  <link rel="icon" type="image/x-icon" href="assets/images/logo.ico" />
-  <title>HN</title>
-</head>
-
-<body>
-  <div class="menu_container">
-    <div class="navbar">
-      <div class="menubutton">
-        <a href="javascript:void(0);" class="menuelem" onclick="useMenu()">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" height="20" width="20">
-            <g class="nc-int-icon js-nc-int-icon nc-int-icon-scale">
-              <g class="nc-int-icon-a">
-                <path fill="#393939"
-                  d="M96 160C96 142.3 110.3 128 128 128L512 128C529.7 128 544 142.3 544 160C544 177.7 529.7 192 512 192L128 192C110.3 192 96 177.7 96 160zM96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320zM544 480C544 497.7 529.7 512 512 512L128 512C110.3 512 96 497.7 96 480C96 462.3 110.3 448 128 448L512 448C529.7 448 544 462.3 544 480z">
-                </path>
+  <body>
+    <div class="menu_container">
+      <div class="navbar">
+        <div class="menubutton">
+          <a href="javascript:void(0);" class="menuelem" onclick="useMenu()">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 640 640"
+              height="20"
+              width="20"
+            >
+              <g class="nc-int-icon js-nc-int-icon nc-int-icon-scale">
+                <g class="nc-int-icon-a">
+                  <path
+                    fill="#393939"
+                    d="M96 160C96 142.3 110.3 128 128 128L512 128C529.7 128 544 142.3 544 160C544 177.7 529.7 192 512 192L128 192C110.3 192 96 177.7 96 160zM96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320zM544 480C544 497.7 529.7 512 512 512L128 512C110.3 512 96 497.7 96 480C96 462.3 110.3 448 128 448L512 448C529.7 448 544 462.3 544 480z"
+                  ></path>
+                </g>
+                <g class="nc-int-icon-b">
+                  <path
+                    fill="black"
+                    d="M183.1 137.4C170.6 124.9 150.3 124.9 137.8 137.4C125.3 149.9 125.3 170.2 137.8 182.7L275.2 320L137.9 457.4C125.4 469.9 125.4 490.2 137.9 502.7C150.4 515.2 170.7 515.2 183.2 502.7L320.5 365.3L457.9 502.6C470.4 515.1 490.7 515.1 503.2 502.6C515.7 490.1 515.7 469.8 503.2 457.3L365.8 320L503.1 182.6C515.6 170.1 515.6 149.8 503.1 137.3C490.6 124.8 470.3 124.8 457.8 137.3L320.5 274.7L183.1 137.4z"
+                  ></path>
+                </g>
               </g>
-              <g class="nc-int-icon-b">
-                <path fill="black"
-                  d="M183.1 137.4C170.6 124.9 150.3 124.9 137.8 137.4C125.3 149.9 125.3 170.2 137.8 182.7L275.2 320L137.9 457.4C125.4 469.9 125.4 490.2 137.9 502.7C150.4 515.2 170.7 515.2 183.2 502.7L320.5 365.3L457.9 502.6C470.4 515.1 490.7 515.1 503.2 502.6C515.7 490.1 515.7 469.8 503.2 457.3L365.8 320L503.1 182.6C515.6 170.1 515.6 149.8 503.1 137.3C490.6 124.8 470.3 124.8 457.8 137.3L320.5 274.7L183.1 137.4z">
-                </path>
-              </g>
-            </g>
-            <script>
-              function initIntIcon(i) {
-                if
-                  (i.classList.contains("js-nc-int-icon-loaded")) return;
+              <script>
+                function initIntIcon(i) { if
+                (i.classList.contains("js-nc-int-icon-loaded")) return;
                 i.classList.add("js-nc-int-icon-loaded");
                 i.closest("div").addEventListener("click", function (n) {
-                  i.classList.toggle("nc-int-icon-state-b");
-                });
-              } var intIcons =
+                i.classList.toggle("nc-int-icon-state-b"); }); } var intIcons =
                 document.getElementsByClassName("js-nc-int-icon"); for (var i =
-                  0; intIcons.length > i; i++) { initIntIcon(intIcons[i]); }
-            </script>
-            <style>
-              .nc-int-icon-scale {
-                --animation-duration: 0.2s;
-              }
+                0; intIcons.length > i; i++) { initIntIcon(intIcons[i]); }
+              </script>
+              <style>
+                .nc-int-icon-scale {
+                  --animation-duration: 0.2s;
+                }
 
-              .nc-int-icon {
-                position: relative;
-              }
+                .nc-int-icon {
+                  position: relative;
+                }
 
-              .nc-int-icon-b {
-                position: absolute;
-                top: calc(50% - 0.5em);
-                left: calc(50% - 0.5em);
-                opacity: 0;
-              }
+                .nc-int-icon-b {
+                  position: absolute;
+                  top: calc(50% - 0.5em);
+                  left: calc(50% - 0.5em);
+                  opacity: 0;
+                }
 
-              .nc-int-icon-a,
-              .nc-int-icon-b {
-                transform-origin: center center;
-              }
+                .nc-int-icon-a,
+                .nc-int-icon-b {
+                  transform-origin: center center;
+                }
 
-              .nc-int-icon-scale .nc-int-icon-a,
-              .nc-int-icon-scale .nc-int-icon-b {
-                transition: opacity 0s calc(var(--animation-duration) / 2),
-                  transform var(--animation-duration);
-              }
+                .nc-int-icon-scale .nc-int-icon-a,
+                .nc-int-icon-scale .nc-int-icon-b {
+                  transition: opacity 0s calc(var(--animation-duration) / 2),
+                    transform var(--animation-duration);
+                }
 
-              .nc-int-icon-scale .nc-int-icon-b {
-                transform: scale(0.8);
-              }
+                .nc-int-icon-scale .nc-int-icon-b {
+                  transform: scale(0.8);
+                }
 
-              .nc-int-icon-state-b .nc-int-icon-a {
-                opacity: 0;
-              }
+                .nc-int-icon-state-b .nc-int-icon-a {
+                  opacity: 0;
+                }
 
-              .nc-int-icon-state-b .nc-int-icon-b {
-                opacity: 1;
-              }
+                .nc-int-icon-state-b .nc-int-icon-b {
+                  opacity: 1;
+                }
 
-              .nc-int-icon-scale.nc-int-icon-state-b .nc-int-icon-a {
-                transform: scale(0.8);
-              }
+                .nc-int-icon-scale.nc-int-icon-state-b .nc-int-icon-a {
+                  transform: scale(0.8);
+                }
 
-              .nc-int-icon-scale.nc-int-icon-state-b .nc-int-icon-b {
-                transform: scale(1);
-              }
-            </style>
-          </svg>
-        </a>
+                .nc-int-icon-scale.nc-int-icon-state-b .nc-int-icon-b {
+                  transform: scale(1);
+                }
+              </style>
+            </svg>
+          </a>
+        </div>
+        <a href="#hero_section" class="logo" onclick="hideMenu()">HN</a>
+        <a href="#book_section" class="book_btn" onclick="hideMenu()">BOKA</a>
       </div>
-      <a href="#hero_section" class="logo" onclick="hideMenu()">HN</a>
-      <a href="#book_section" class="book_btn" onclick="hideMenu()">BOKA</a>
+      <div class="hidden_menu" id="hidden_menu">
+        <a class="hidden_menu_link" href="#hero_section" onclick="hideMenu()"
+          >HEM</a
+        >
+        <a
+          class="hidden_menu_link"
+          href="#services_content_container"
+          onclick="hideMenu()"
+          >VÅRA TJÄNSTER</a
+        >
+        <a class="hidden_menu_link" href="#book_section" onclick="hideMenu()"
+          >BOKA</a
+        >
+        <a class="hidden_menu_link" href="#prices_section" onclick="hideMenu()"
+          >VÅRA PRISER</a
+        >
+      </div>
     </div>
-    <div class="hidden_menu" id="hidden_menu">
-      <a class="hidden_menu_link" href="#hero_section" onclick="hideMenu()">HEM</a>
-      <a class="hidden_menu_link" href="#services_content_container" onclick="hideMenu()">VÅRA TJÄNSTER</a>
-      <a class="hidden_menu_link" href="#book_section" onclick="hideMenu()">BOKA</a>
-      <a class="hidden_menu_link" href="#prices_section" onclick="hideMenu()">VÅRA PRISER</a>
-    </div>
-  </div>
-  <div class="page_content_container">
-    <div class="hero_section" id="hero_section">
-      <img class="leaf_hero" src="assets/images/leaf.svg" alt="https://www.vecteezy.com/free-vector/tea-leaf-icon" />
-      <h1 class="hero_header">Behöver du hjälp med din trädgård?</h1>
-      <a href="#book_section" class="book_btn hero" onclick="hideMenu()">BOKA</a>
-    </div>
-    <div class="services_content_container" id="services_content_container">
-      <p class="services_header">Vad vi kan hjälpa med:</p>
-      <div class="carousel_wrapper" id="carousel_wrapper">
-        <div class="carousel_slide">
-          <div class="slide_container" id="slide_container" style="background-image: url(assets/images/leaf_2.jpg)">
-            <h1 class="slide_title">Plocka löv</h1>
-            <div class="slide_body">
-              <div class="slide_body_text_wrapper">
-                Vi kan hjälpa dig med att skotta snö! Bevöver du hjälp med
-                saker som är jättejobbiga? Wow, då kan vi hjälpa till
+    <div class="page_content_container">
+      <div class="hero_section" id="hero_section">
+        <img
+          class="leaf_hero"
+          src="assets/images/leaf.svg"
+          alt="https://www.vecteezy.com/free-vector/tea-leaf-icon"
+        />
+        <h1 class="hero_header">Behöver du hjälp med din trädgård?</h1>
+        <a href="#book_section" class="book_btn hero" onclick="hideMenu()"
+          >BOKA</a
+        >
+      </div>
+      <div class="services_content_container" id="services_content_container">
+        <p class="services_header">Vad vi kan hjälpa med:</p>
+        <div class="carousel_wrapper" id="carousel_wrapper">
+          <div class="carousel_slide">
+            <div
+              class="slide_container"
+              id="slide_container"
+              style="background-image: url(assets/images/leaf_2.jpg)"
+            >
+              <h1 class="slide_title">Kratta löv</h1>
+              <div class="slide_body">
+                <div class="slide_body_text_wrapper">
+                  Snart är alla löv på marken, behöver du avlastning med att
+                  kratta ihop dessa så kommer vi Nissar med krattorna i högsta
+                  hugg!
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel_slide">
+            <div
+              class="slide_container"
+              style="background-image: url(assets/images/plommon.jpg)"
+            >
+              <h1 class="slide_title">Plocka frukt</h1>
+              <div class="slide_body">
+                <div class="slide_body_text_wrapper">
+                  Har du ett träd fullt av frukt men har svårt att plocka den?
+                  Låt oss plocka det du vill få ner och lägga i kassar.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel_slide">
+            <div
+              class="slide_container"
+              style="background-image: url(assets/images/vroom.jpg)"
+            >
+              <h1 class="slide_title">Bortforsling</h1>
+              <div class="slide_body">
+                <div class="slide_body_text_wrapper">
+                  Vi tar med oss säckarna med löv och annat trädgårdsavfall om
+                  detta är av intresse.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel_slide">
+            <div
+              class="slide_container"
+              style="background-image: url(assets/images/snow_2_comp.jpg)"
+            >
+              <h1 class="slide_title">Skotta snö</h1>
+              <div class="slide_body">
+                <div class="slide_body_text_wrapper">
+                  När snön kommer finns vi till tjänst - vi kan hjälpa till på
+                  din uppfart men även på trottoaren som du ansvarar för att
+                  skotta.
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="carousel_slide">
-          <div class="slide_container" style="background-image: url(assets/images/vroom.jpg)">
-            <h1 class="slide_title">Köra avfall</h1>
-            <div class="slide_body">
-              <div class="slide_body_text_wrapper">
-                Vi kan hjälpa dig med att skotta snö! Bevöver du hjälp med
-                saker som är jättejobbiga? Wow, då kan vi hjälpa till
-              </div>
+        <div class="carousel_buttons">
+          <button class="carousel_left" onclick="scroll_left()">
+            <img
+              src="assets/images/arrow.svg"
+              width="10px"
+              alt=""
+              class="carousel_arrow left_arrow"
+            />
+          </button>
+          <button class="carousel_right" onclick="scroll_right()">
+            <img
+              src="assets/images/arrow.svg"
+              width="10px"
+              alt=""
+              class="carousel_arrow right_arrow"
+            />
+          </button>
+        </div>
+      </div>
+      <div id="book_section" class="book_time_section">
+        <img class="rake_logo" src="assets/images/rake_logo.svg" alt="" />
+        <p class="book_header">Boka</p>
+        <p class="book_desc">
+          Fyll i din intresseanmälan i vårt Google formulär
+        </p>
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSdmzStDICdM69EwNld7pQU0y1Mah2SH8phyY0iy4EQqBdSEtQ/viewform?pli=1&pli=1"
+          target="_blank"
+          class="interest_btn"
+          onclick="hideMenu()"
+          >INTRESSEANMÄLAN</a
+        >
+      </div>
+      <div class="prices_section" id="prices_section">
+        <img src="assets/images/prices_logo.svg" alt="" class="prices_logo" />
+        <p class="prices_header">Våra Priser</p>
+        <div class="price_wrapper">
+          <div class="prices_card">
+            <div class="price_card_top">
+              <p class="price_card_title">Trädgårdsarbete</p>
+              <p class="price">600 kr/timme</p>
+            </div>
+            <div class="price_card_bottom">
+              <ul class="price_notes">
+                <li>50% RUT avdrag på lövkrattning</li>
+                <li>Timpriset beräknas per Nisse</li>
+              </ul>
+            </div>
+          </div>
+          <div class="prices_card">
+            <div class="price_card_top">
+              <p class="price_card_title">Bortforsling</p>
+              <p class="price">400kr</p>
+            </div>
+            <div class="price_card_bottom">
+              <ul class="price_notes">
+                <li>Priset gäller inom området</li>
+              </ul>
             </div>
           </div>
         </div>
-        <div class="carousel_slide">
-          <div class="slide_container" style="background-image: url(assets/images/snow_2_comp.jpg)">
-            <h1 class="slide_title">Skotta snö</h1>
-            <div class="slide_body">
-              <div class="slide_body_text_wrapper">
-                Vi kan hjälpa dig med att skotta snö! Bevöver du hjälp med
-                saker som är jättejobbiga? Wow, då kan vi hjälpa till
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel_slide">
-          <div class="slide_container" style="background-image: url(assets/images/plommon.jpg)">
-            <h1 class="slide_title">Plocka frukt</h1>
-            <div class="slide_body">
-              <div class="slide_body_text_wrapper">
-                Vi kan hjälpa dig med att skotta snö! Bevöver du hjälp med
-                saker som är jättejobbiga? Wow, då kan vi hjälpa till
-              </div>
-            </div>
-          </div>
-        </div>
+        <p class="payment_info_text">Faktureras via Frilans Finans</p>
       </div>
-      <div class="carousel_buttons">
-        <button class="carousel_left" onclick="scroll_left()">
-          <img src="assets/images/arrow.svg" width="10px" alt="">
-        </button>
-        <button class="carousel_right" onclick="scroll_right()">&#62;</button>
-      </div>
-    </div>
-    <div id="book_section" class="book_time_section">
-      <img class="rake_logo" src="assets/images/rake_logo.svg" alt="">
-      <p class="book_header">Boka</p>
-      <p class="book_desc">Fyll i din intresseanmälan i vårt Google formulär</p>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdmzStDICdM69EwNld7pQU0y1Mah2SH8phyY0iy4EQqBdSEtQ/viewform?pli=1&pli=1"
-        target="_blank" class="interest_btn" onclick="hideMenu()">INTRESSEANMÄLAN</a>
-    </div>
-    <div class="prices_section" id="prices_section">
-      <img src="assets/images/prices_logo.svg" alt="" class="prices_logo">
-      <p class="prices_header">Våra Priser</p>
-      <div class="price_wrapper">
-        <div class="prices_card">
-          <div class="price_card_top">
-            <p class="price_card_title">Trägrårdsarbete</p>
-            <p class="price">600 kr/timme</p>
-          </div>
-          <div class="price_card_bottom">
-            <ul class="price_notes">
-              <li>50% RUT avdrag på lövkrattning</li>
-              <li>Timpriset beräknas per Nisse</li>
-            </ul>
-          </div>
+      <div class="about_us" id="about_us">
+        <div class="about_us_image_container">
+          <img
+            class="about_us_image alva_image"
+            src="assets/images/alva.jpg"
+            alt="Bild på Alva"
+          />
+          <img
+            class="about_us_image leo_image"
+            src="assets/images/leo.jpg"
+            alt="Bild på Leo"
+          />
         </div>
-        <div class="prices_card">
-          <div class="price_card_top">
-            <p class="price_card_title">Bortforsling</p>
-            <p class="price">400kr</p>
-          </div>
-          <div class="price_card_bottom">
-            <ul class="price_notes">
-              <li>Priset gäller inom området</li>
-            </ul>
+        <div class="about_us_desc_container">
+          <p class="about_us_header">Om oss</p>
+          <div class="about_us_text">
+            Vi är Alva och Leo – personerna bakom HjälpNissarna! <br />
+            Det här är vårt sidoprojekt som ger oss chansen att komma ut i den
+            friska luften (något vi verkligen uppskattar) och samtidigt göra
+            något annorlunda och meningsfullt. Vi hoppas kunna hjälpa dig när du
+            behöver lite extra avlastning med trädgårdsarbetet!
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- <div class="about_us" id="about_us">
-    <div class="about_us_wrapper">
-      Om oss
-    </div>
-  </div> -->
-  </div>
-  <script src="js/menu.js"></script>
-  <script src="js/carousel_tap.js"></script>
-  <script src="js/carousel_nav.js"></script>
-</body>
-
+    <script src="js/menu.js"></script>
+    <script src="js/carousel_tap.js"></script>
+    <script src="js/carousel_nav.js"></script>
+  </body>
 </html>

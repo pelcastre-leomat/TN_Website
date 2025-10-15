@@ -14,6 +14,7 @@
 .prices_card {
     display: flex;
     width: 100%;
+    min-width: 250px;
     max-width: 300px;
     height: min-content;
     justify-content: space-around;
@@ -38,6 +39,7 @@
 
 .price_card_top>* {
     margin: 0;
+    text-wrap: wrap;
 }
 
 .price_card_bottom {
@@ -81,6 +83,11 @@
     margin: 0px;
 }
 
+.paymnet_info_text{
+    font-size: 1.1em;
+    font-family: 'Times New Roman', Times, serif;
+}
+
 @media(width>1000px) {
     .price_wrapper {
         flex-wrap: wrap;
@@ -91,4 +98,5 @@
         height: 200px;
 
     }
+    
 }
