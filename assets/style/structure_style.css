@@ -31,7 +31,7 @@ body {
   z-index: 30;
 }
 
-.menu_container>* {
+.menu_container > * {
   z-index: 100;
 }
 
@@ -95,7 +95,7 @@ body {
   flex-direction: column;
   gap: 20px;
   text-align: left;
-  background-color: rgb(225, 225, 225)
+  background-color: rgb(225, 225, 225);
 }
 
 .about_us {
@@ -108,4 +108,18 @@ body {
   justify-content: center;
   flex-direction: column;
   gap: 30px;
+}
+
+.contact_us_section {
+  background-color: rgb(225, 225, 225);
+  width: 100%;
+  height: 100%;
+  scroll-snap-align: start;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Times New Roman", Times, serif;
+  padding: var(--page-padding);
 }

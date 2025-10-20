@@ -1,0 +1,9 @@
+.contact_us_mail > * {
+  color: black;
+}
+.contact_us_info {
+  text-align: center;
+  font-size: 1.1em;
+  font-family: "Times New Roman", Times, serif;
+  line-height: 25px;
+}

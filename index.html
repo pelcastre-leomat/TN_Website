@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="assets/style/book_style.css" />
     <link rel="stylesheet" href="assets/style/prices_style.css" />
     <link rel="stylesheet" href="assets/style/about_us_style.css" />
+    <link rel="stylesheet" href="assets/style/contact_us.css" />
     <link rel="icon" type="image/x-icon" href="assets/images/logo.ico" />
     <title>HN</title>
   </head>
@@ -119,6 +120,12 @@
         >
         <a class="hidden_menu_link" href="#about_us" onclick="hideMenu()"
           >OM OSS</a
+        >
+        <a
+          class="hidden_menu_link"
+          href="#contact_us_section"
+          onclick="hideMenu()"
+          >KONTAKTA OSS</a
         >
       </div>
     </div>
@@ -233,6 +240,41 @@
       <div class="prices_section" id="prices_section">
         <img src="assets/images/prices_logo.svg" alt="" class="prices_logo" />
         <p class="prices_header">Våra Priser</p>
+        <!-- Trigger/Open The Modal -->
+        <button class="myBtn" id="myBtn">VISA PRISTABELL</button>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+          <!-- Modal content -->
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal_price_wrapper">
+              <div class="prices_card">
+                <div class="price_card_top">
+                  <p class="price_card_title">Trädgårdsarbete</p>
+                  <p class="price">600 kr/timme</p>
+                </div>
+                <div class="price_card_bottom">
+                  <ul class="price_notes">
+                    <li>50% RUT avdrag på lövkrattning</li>
+                    <li>Timpriset beräknas per Nisse</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="prices_card">
+                <div class="price_card_top">
+                  <p class="price_card_title">Bortforsling</p>
+                  <p class="price">400kr</p>
+                </div>
+                <div class="price_card_bottom">
+                  <ul class="price_notes">
+                    <li>Priset gäller inom området</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="price_wrapper">
           <div class="prices_card">
             <div class="price_card_top">
@@ -257,6 +299,24 @@
               </ul>
             </div>
           </div>
+        </div>
+        <div class="carousel_buttons">
+          <button class="carousel_left" onclick="price_scroll_left()">
+            <img
+              src="assets/images/arrow.svg"
+              width="10px"
+              alt=""
+              class="carousel_arrow left_arrow"
+            />
+          </button>
+          <button class="carousel_right" onclick="price_scroll_right()">
+            <img
+              src="assets/images/arrow.svg"
+              width="10px"
+              alt=""
+              class="carousel_arrow right_arrow"
+            />
+          </button>
         </div>
         <p class="payment_info_text">Faktureras via Frilans Finans</p>
       </div>
@@ -284,9 +344,21 @@
           </div>
         </div>
       </div>
+      <div class="contact_us_section" id="contact_us_section">
+        <h1 class="contact_us_header">Frågor?<br />Kontakta oss!</h1>
+        <h2 class="contact_us_mail">
+          <a href="mailto:hjalpnissarna@gmail.com">hjalpnissarna@gmail.com</a>
+        </h2>
+        <p class="contact_us_info">
+          Har du frågor om pris, tidsbokning eller något annat du vill ha hjälp
+          med? Maila oss, så återkommer vi så snart som möjligt!
+        </p>
+      </div>
     </div>
     <script src="js/menu.js"></script>
     <script src="js/carousel_tap.js"></script>
     <script src="js/carousel_nav.js"></script>
+    <script src="js/price_modal.js"></script>
+    <script src="js/prices_carousel_nav.js"></script>
   </body>
 </html>

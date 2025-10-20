@@ -4,15 +4,15 @@ const container = document.querySelector(".carousel_wrapper");
 let scroll_n = 0;
 
 // Scroll to a specific slide
-function scroll_slide() {
+function scroll_price() {
   slides[scroll_n].scrollIntoView({ behavior: "smooth" });
 }
 
 // Move left/right
-function scroll_left() {
+function price_scroll_left() {
   if (scroll_n > 0) {
     scroll_n -= 1;
-    scroll_slide();
+    scroll_price();
   }
 }
 
@@ -22,7 +22,7 @@ function scroll_right() {
   } else if (scroll_n == slides.length - 1) {
     scroll_n = 0
   }
-  scroll_slide();
+  scroll_price();
 }
 
 // Detect which slide is visible
@@ -34,7 +34,6 @@ const observer = new IntersectionObserver(
         const visibleIndex = Array.from(slides).indexOf(entry.target);
         if (visibleIndex !== -1) {
           scroll_n = visibleIndex; // Sync the counter
-          console.log("Visible slide:", scroll_n, entry.target);
         }
       }
     });
