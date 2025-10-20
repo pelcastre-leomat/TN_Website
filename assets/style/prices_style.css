@@ -190,6 +190,9 @@
     height: 50%;
     width: 50%;
   }
+  .carousel_buttons.prices {
+    display: none;
+  }
 }
 
 @media (width>1000px) {

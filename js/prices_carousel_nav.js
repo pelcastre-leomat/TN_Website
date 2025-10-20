@@ -10,7 +10,6 @@ function scroll_price() {
 
 // Move left/right
 function price_scroll_left() {
-  console.log(price_scroll_n);
   if (price_scroll_n > 0) {
     price_scroll_n -= 1;
     scroll_price();
